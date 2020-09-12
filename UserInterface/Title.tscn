@@ -1,0 +1,14 @@
+[gd_scene format=2]
+
+[node name="Title" type="Label"]
+modulate = Color( 0, 1, 0.482353, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -37.8252
+margin_top = 144.453
+margin_right = 44.1748
+margin_bottom = 158.453
+text = "Rabbit Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
