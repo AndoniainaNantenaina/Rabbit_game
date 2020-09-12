@@ -7,7 +7,7 @@ enum  {
 var velocity = Vector2.ZERO
 
 export var WALK_SPEED = 120
-export var RUN_SPEED = 180
+export var RUN_SPEED = 220
 export var FRICTION = 500
 export var ACCELERATION = 500
 export var GRAVITY = 25
@@ -25,9 +25,6 @@ func _physics_process(delta):
 	match state:
 		WALK :
 			walk_state(delta)
-	
-func move():
-	velocity = move_and_slide(velocity, Vector2(0, -1))
 		
 func walk_state(delta):
 	var input_vector = Vector2.ZERO
@@ -41,6 +38,10 @@ func walk_state(delta):
 			
 		if Input.is_action_pressed("run") :
 			velocity = velocity.move_toward(input_vector * RUN_SPEED, ACCELERATION * delta)
+			if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+				velocity.y = -JUMP_HIGH
+				anim_state.travel("Jump") 
+				move_and_slide(input_vector * RUN_SPEED)
 			if is_on_floor():
 				anim_state.travel("Run")
 		else :
@@ -59,6 +60,9 @@ func walk_state(delta):
 			
 	velocity.y += GRAVITY
 	move()
-
+	
+func move():
+	velocity = move_and_slide(velocity, Vector2(0, -1))
+	
 func jump_finished():
 	state = WALK

@@ -15,4 +15,17 @@ autostart = true
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 507.68, 305.34 )
 scale = Vector2( 0.3, 0.3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 32.4008
+margin_top = 13.5595
+margin_right = 75.4008
+margin_bottom = 34.5595
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/font_color = Color( 0.713726, 0.141176, 0.141176, 1 )
+custom_colors/font_color_shadow = Color( 0.141176, 0.341176, 0.490196, 1 )
+text = "SCORE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="timeout" from="TimerObjectToShow" to="." method="_on_TimerObjectToShow_timeout"]
