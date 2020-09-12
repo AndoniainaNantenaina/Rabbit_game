@@ -5,7 +5,7 @@ var velocity = Vector2.ZERO
 
 func _ready():
 	randomize()
-	self.create(Vector2(rand_range(32, 992), -128))
+	self.create(Vector2(rand_range(32, 992), -64))
 
 #func _process(delta):
 #	pass
