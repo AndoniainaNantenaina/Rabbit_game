@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Images/BG.png" type="Texture" id=1]
 [ext_resource path="res://Map/tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://GameComponent/Hitbox.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 320 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 512, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 62.6995, 33.7016 )
 
 [node name="Map" type="Node2D"]
 
@@ -49,3 +53,20 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DelimiterBottom"]
 shape = SubResource( 2 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 3 )]
+position = Vector2( 319.177, 718.266 )
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2( -2.66968, -2.66968 )
+shape = SubResource( 3 )
+
+[node name="Hitbox2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 831.964, 714.487 )
+
+[node name="CollisionShape2D" parent="Hitbox2" index="0"]
+shape = SubResource( 3 )
+
+[editable path="Hitbox"]
+
+[editable path="Hitbox2"]

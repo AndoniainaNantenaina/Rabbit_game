@@ -13,7 +13,9 @@ export var ACCELERATION = 500
 export var GRAVITY = 25
 export var JUMP_HIGH = 500
 
+
 onready var anim_tree = $AnimationTree
+onready var hitbox = $Hitbox
 onready var anim_state = anim_tree.get("parameters/playback")
 
 onready var state = WALK
@@ -66,3 +68,8 @@ func move():
 	
 func jump_finished():
 	state = WALK
+
+
+func _on_HurtBox_area_entered(area):
+	hitbox.score = hitbox.score - 1
+	position = Vector2(100, 500)
