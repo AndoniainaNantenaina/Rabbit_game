@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Images/BG.png" type="Texture" id=1]
 [ext_resource path="res://Map/tiles.tres" type="TileSet" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 320 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 512, 10 )
 
 [node name="Map" type="Node2D"]
 
@@ -16,3 +22,27 @@ tile_set = ExtResource( 2 )
 collision_mask = 3
 format = 1
 tile_data = PoolIntArray( 458754, 1, 0, 458766, 1, 0, 524288, 0, 0, 524290, 0, 0, 524292, 0, 0, 524294, 0, 0, 524296, 0, 0, 524298, 0, 0, 524300, 0, 0, 524302, 0, 0 )
+
+[node name="DelimiterLeft" type="StaticBody2D" parent="."]
+position = Vector2( -8, 320 )
+collision_layer = 8
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DelimiterLeft"]
+shape = SubResource( 1 )
+
+[node name="DelimiterRight" type="StaticBody2D" parent="."]
+position = Vector2( 1032, 320 )
+collision_layer = 8
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DelimiterRight"]
+shape = SubResource( 1 )
+
+[node name="DelimiterBottom" type="StaticBody2D" parent="."]
+position = Vector2( 512, 688 )
+collision_layer = 8
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DelimiterBottom"]
+shape = SubResource( 2 )
