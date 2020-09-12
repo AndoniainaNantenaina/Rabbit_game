@@ -21,7 +21,7 @@ centered = false
 tile_set = ExtResource( 2 )
 collision_mask = 3
 format = 1
-tile_data = PoolIntArray( 458754, 1, 0, 458766, 1, 0, 524288, 0, 0, 524290, 0, 0, 524292, 0, 0, 524294, 0, 0, 524296, 0, 0, 524298, 0, 0, 524300, 0, 0, 524302, 0, 0 )
+tile_data = PoolIntArray( 458754, 1, 0, 458766, 1, 0, 524288, 0, 0, 524290, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524302, 0, 0 )
 
 [node name="DelimiterLeft" type="StaticBody2D" parent="."]
 position = Vector2( -8, 320 )
@@ -40,9 +40,12 @@ collision_mask = 6
 shape = SubResource( 1 )
 
 [node name="DelimiterBottom" type="StaticBody2D" parent="."]
-position = Vector2( 512, 688 )
+position = Vector2( 513.682, 686.318 )
 collision_layer = 8
 collision_mask = 6
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DelimiterBottom"]
 shape = SubResource( 2 )
