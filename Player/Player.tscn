@@ -253,7 +253,7 @@ tracks/3/keys = {
 [node name="Player" type="KinematicBody2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource( 29 )
 centered = false
 offset = Vector2( -150, -500 )
 
