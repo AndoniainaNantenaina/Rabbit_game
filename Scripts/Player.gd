@@ -4,10 +4,12 @@ enum  {
 	WALK,
 }
 
+var health = 3
+
 var velocity = Vector2.ZERO
 
-export var WALK_SPEED = 120
-export var RUN_SPEED = 220
+export var WALK_SPEED = 120 * 1.5
+export var RUN_SPEED = 220 * 1.5
 export var FRICTION = 500
 export var ACCELERATION = 500
 export var GRAVITY = 25
@@ -19,6 +21,10 @@ onready var hitbox = $Hitbox
 onready var anim_state = anim_tree.get("parameters/playback")
 
 onready var state = WALK
+
+onready var heartOne = get_tree().current_scene.get_node("HUD/Heart1")
+onready var heartTwo = get_tree().current_scene.get_node("HUD/Heart2")
+onready var heartThree = get_tree().current_scene.get_node("HUD/Heart3")
 
 func _ready():
 	anim_tree.active = true
@@ -71,5 +77,16 @@ func jump_finished():
 
 
 func _on_HurtBox_area_entered(area):
-	hitbox.score = hitbox.score - 1
+#	hitbox.score = hitbox.score - 1
+	if self.health == 3:
+		self.heartThree.value = 0
+		self.health -= 1
+	elif self.health == 2:
+		self.heartTwo.value = 0
+		self.health -= 1
+	elif self.health == 1:
+		self.heartOne.value = 0
+		self.health -= 1
+		#	==================== Game Over ==================
+
 	position = Vector2(100, 500)

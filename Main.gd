@@ -21,15 +21,14 @@ func _on_TimerObjectToShow_timeout():
 	self.nbr_object_falling += 1
 	
 	if self.nbr_object_falling < 5:
-		timer_object_to_show.wait_time = 5
-	elif self.nbr_object_falling < 10:
-		timer_object_to_show.wait_time = 4
-	elif self.nbr_object_falling < 15:
 		timer_object_to_show.wait_time = 3
-	elif self.nbr_object_falling < 20:
+	elif self.nbr_object_falling < 10:
+		timer_object_to_show.wait_time = 2.5
+	elif self.nbr_object_falling < 15:
 		timer_object_to_show.wait_time = 2
+	elif self.nbr_object_falling < 20:
+		timer_object_to_show.wait_time = 1.5
 	elif self.nbr_object_falling < 25:
 		timer_object_to_show.wait_time = 1
 	else:
-		timer_object_to_show.wait_time = 0
-		object_to_fall.speed = 400
+		timer_object_to_show.wait_time = 0.5

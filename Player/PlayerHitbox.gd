@@ -6,7 +6,8 @@ extends Area2D
 # var b = "text"
 
 onready var score = 0 setget score_change
-onready var scoreLabel = get_tree().current_scene.get_node("Score")
+onready var scoreLabel = get_tree().current_scene.get_node("HUD/Score")
+#onready var scoreLabel = get_parent().get_node("HUD/Score")
 
 func score_change(value):
 	score = value

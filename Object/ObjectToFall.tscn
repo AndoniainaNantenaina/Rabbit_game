@@ -8,7 +8,7 @@
 radius = 32.0
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 55.0016
+radius = 34.3394
 
 [node name="ObjectToFall" type="KinematicBody2D"]
 scale = Vector2( 0.6, 0.6 )

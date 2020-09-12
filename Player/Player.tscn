@@ -598,7 +598,7 @@ start_node = "Idle"
 [sub_resource type="AnimationNodeStateMachinePlayback" id=29]
 
 [sub_resource type="RectangleShape2D" id=30]
-extents = Vector2( 189.346, 292.802 )
+extents = Vector2( 142.413, 269.506 )
 
 [sub_resource type="RectangleShape2D" id=31]
 extents = Vector2( 160.773, 91.2021 )
@@ -606,7 +606,6 @@ extents = Vector2( 160.773, 91.2021 )
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 31 )
-RUN_SPEED = 260
 FRICTION = 800
 ACCELERATION = 800
 
@@ -643,7 +642,6 @@ parameters/Walk/blend_position = 1.0
 script = ExtResource( 64 )
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-visible = false
 position = Vector2( 1.5874, -290.494 )
 shape = SubResource( 30 )
 
