@@ -20,7 +20,7 @@ scale = Vector2( 0.3, 0.3 )
 [node name="HUD" parent="." instance=ExtResource( 5 )]
 
 [node name="TimerDayAndNight" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 60.0
 autostart = true
 [connection signal="timeout" from="TimerObjectToShow" to="." method="_on_TimerObjectToShow_timeout"]
 [connection signal="timeout" from="TimerDayAndNight" to="." method="_on_TimerDayAndNight_timeout"]

@@ -66,8 +66,8 @@
 [ext_resource path="res://Player/PlayerHitbox.gd" type="Script" id=64]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 136.602
-height = 273.331
+radius = 129.465
+height = 243.95
 
 [sub_resource type="Animation" id=2]
 resource_name = "IdleLeft"
@@ -598,7 +598,7 @@ start_node = "Idle"
 [sub_resource type="AnimationNodeStateMachinePlayback" id=29]
 
 [sub_resource type="RectangleShape2D" id=30]
-extents = Vector2( 142.413, 269.506 )
+extents = Vector2( 142.413, 242.005 )
 
 [sub_resource type="RectangleShape2D" id=31]
 extents = Vector2( 160.773, 91.2021 )
@@ -606,8 +606,10 @@ extents = Vector2( 160.773, 91.2021 )
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 31 )
-FRICTION = 800
-ACCELERATION = 800
+WALK_SPEED = 200.0
+RUN_SPEED = 340.0
+FRICTION = 1000
+ACCELERATION = 1000
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 49 )
@@ -615,7 +617,7 @@ centered = false
 offset = Vector2( -150, -500 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.22748, -275.106 )
+position = Vector2( 5.90777, -247.754 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -642,13 +644,15 @@ parameters/Walk/blend_position = 1.0
 script = ExtResource( 64 )
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2( 1.5874, -290.494 )
+visible = false
+position = Vector2( -2.38419e-06, -239.697 )
 shape = SubResource( 30 )
 
 [node name="HurtBox" parent="." instance=ExtResource( 63 )]
 position = Vector2( 0, 107.943 )
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
+visible = false
 shape = SubResource( 31 )
 [connection signal="area_entered" from="Hitbox" to="Hitbox" method="_on_Hitbox_area_entered"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]

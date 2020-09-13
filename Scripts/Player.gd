@@ -77,7 +77,7 @@ func jump_finished():
 
 
 func _on_HurtBox_area_entered(area):
-#	hitbox.score = hitbox.score - 1
+	hitbox.score = hitbox.score - 1
 	if self.health == 3:
 		self.heartThree.value = 0
 		self.health -= 1
