@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fonts/sketchalot/Sketchalot.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[node name="Loose_text" type="Label"]
+modulate = Color( 0.658824, 0.0431373, 0.0431373, 1 )
+margin_right = 310.0
+margin_bottom = 34.0
+rect_scale = Vector2( 1.5, 1.4 )
+custom_fonts/font = SubResource( 1 )
+text = "Oups..! Vous avez perdu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
