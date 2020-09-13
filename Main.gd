@@ -1,7 +1,8 @@
 extends Node2D
 
 var ObjectToFall = preload("res://Object/ObjectToFall.tscn")
-var nbr_object_falling 
+var nbr_object_falling
+var day_and_night = 1
 
 onready var timer_object_to_show = $TimerObjectToShow
 
@@ -32,3 +33,14 @@ func _on_TimerObjectToShow_timeout():
 		timer_object_to_show.wait_time = 1
 	else:
 		timer_object_to_show.wait_time = 0.5
+
+
+func _on_TimerDayAndNight_timeout():
+	if self.day_and_night == 1:
+		$Map/AnimationPlayer.play("DayToNight")
+		$HUD/AnimationPlayer.play("DayToNight")
+		self.day_and_night = 0
+	else:
+		$Map/AnimationPlayer.play("NightToDay")
+		$HUD/AnimationPlayer.play("NightToDay")
+		self.day_and_night = 1
