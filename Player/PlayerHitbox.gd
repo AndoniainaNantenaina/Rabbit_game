@@ -26,4 +26,4 @@ func _ready():
 func _on_Hitbox_area_entered(area):
 	score += 1
 	scoreLabel.text = str(score)
-	
+	GlobalScore.score = score

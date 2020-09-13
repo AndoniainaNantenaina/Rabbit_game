@@ -78,14 +78,14 @@ __meta__ = {
 }
 
 [node name="Background" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.470588 )
+modulate = Color( 0, 0, 0, 0 )
 position = Vector2( 0, -72 )
 scale = Vector2( 1.024, 1.024 )
 texture = ExtResource( 1 )
 centered = false
 
 [node name="LooseText" parent="." instance=ExtResource( 3 )]
-modulate = Color( 0.858824, 0.25098, 0.313726, 1 )
+modulate = Color( 0.858824, 0.25098, 0.313726, 0 )
 margin_left = 349.0
 margin_top = 168.0
 margin_right = 570.0
@@ -104,7 +104,7 @@ margin_bottom = 198.0
 text = "Your Score : 0"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
-modulate = Color( 1, 1, 1, 0.466667 )
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
