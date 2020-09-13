@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed = 250
+var speed = 200
 var velocity = Vector2.ZERO
 
 var HitEffect = preload("res://Effects/HitEffect.tscn")

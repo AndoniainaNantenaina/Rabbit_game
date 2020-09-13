@@ -39,7 +39,7 @@ margin_top = 75.0
 margin_right = 143.5
 margin_bottom = 57.0
 custom_fonts/font = SubResource( 1 )
-text = "RABBIT GAME"
+text = "THE RABBIT GAME"
 __meta__ = {
 "_edit_use_anchors_": false
 }

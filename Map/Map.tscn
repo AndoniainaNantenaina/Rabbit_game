@@ -8,7 +8,7 @@
 extents = Vector2( 10, 320 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 512, 10 )
+extents = Vector2( 128.43, 8.44208 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 62.6995, 33.7016 )
@@ -52,12 +52,18 @@ position = Vector2( 0, -72 )
 scale = Vector2( 1.024, 1 )
 texture = ExtResource( 1 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
 collision_mask = 3
 format = 1
 tile_data = PoolIntArray( 458754, 1, 0, 458766, 1, 0, 524288, 0, 0, 524290, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524302, 0, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="DelimiterLeft" type="StaticBody2D" parent="."]
 position = Vector2( -8, 320 )
@@ -76,7 +82,7 @@ collision_mask = 6
 shape = SubResource( 1 )
 
 [node name="DelimiterBottom" type="StaticBody2D" parent="."]
-position = Vector2( 513.682, 686.318 )
+position = Vector2( 129.828, 521.688 )
 collision_layer = 8
 collision_mask = 6
 __meta__ = {
@@ -84,6 +90,69 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DelimiterBottom"]
+position = Vector2( -2.51984, 0 )
+shape = SubResource( 2 )
+
+[node name="DelimiterBottom3" type="StaticBody2D" parent="."]
+position = Vector2( 575.418, 520.009 )
+collision_layer = 8
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DelimiterBottom3"]
+position = Vector2( 0.84375, -1.68182 )
+scale = Vector2( 1.5, 1 )
+shape = SubResource( 2 )
+
+[node name="DelimiterBottom4" type="StaticBody2D" parent="."]
+position = Vector2( 962.214, 521.269 )
+collision_layer = 8
+collision_mask = 6
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DelimiterBottom4"]
+position = Vector2( -2.51984, 0 )
+scale = Vector2( 0.5, 1 )
+shape = SubResource( 2 )
+
+[node name="DelimiterBottom5" type="StaticBody2D" parent="."]
+position = Vector2( 320.914, 648.521 )
+collision_layer = 8
+collision_mask = 6
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DelimiterBottom5"]
+position = Vector2( -2.51984, 0 )
+scale = Vector2( 0.5, 1 )
+shape = SubResource( 2 )
+
+[node name="DelimiterBottom6" type="StaticBody2D" parent="."]
+position = Vector2( 834.962, 647.26 )
+collision_layer = 8
+collision_mask = 6
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DelimiterBottom6"]
+position = Vector2( -2.51984, 0 )
+scale = Vector2( 0.5, 1 )
+shape = SubResource( 2 )
+
+[node name="DelimiterBottom2" type="StaticBody2D" parent="."]
+position = Vector2( 128.146, 522.528 )
+collision_layer = 8
+collision_mask = 6
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DelimiterBottom2"]
+position = Vector2( -2.51984, 0 )
 shape = SubResource( 2 )
 
 [node name="Hitbox" parent="." instance=ExtResource( 3 )]

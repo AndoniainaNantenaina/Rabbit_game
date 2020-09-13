@@ -65,9 +65,8 @@
 [ext_resource path="res://GameComponent/HurtBox.tscn" type="PackedScene" id=63]
 [ext_resource path="res://Player/PlayerHitbox.gd" type="Script" id=64]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 129.465
-height = 243.95
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 36.4437, 247.609 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "IdleLeft"
@@ -617,7 +616,7 @@ centered = false
 offset = Vector2( -150, -500 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 5.90777, -247.754 )
+position = Vector2( 1.151, -244.186 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
