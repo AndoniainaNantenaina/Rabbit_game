@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Bensound - A New Beginning.ogg-f2bc4b8a3206727285f9cfc1359e6f1e.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Bensound - A New Beginning.ogg"
+dest_files=[ "res://.import/Bensound - A New Beginning.ogg-f2bc4b8a3206727285f9cfc1359e6f1e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

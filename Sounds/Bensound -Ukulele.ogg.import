@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Bensound -Ukulele.ogg-e5a62d32eac061b5fb40420786591ac1.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Bensound -Ukulele.ogg"
+dest_files=[ "res://.import/Bensound -Ukulele.ogg-e5a62d32eac061b5fb40420786591ac1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

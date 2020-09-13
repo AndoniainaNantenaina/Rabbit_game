@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Bensound - Little Idea.ogg-8eafcb6457540c940df90d57348645e6.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Bensound - Little Idea.ogg"
+dest_files=[ "res://.import/Bensound - Little Idea.ogg-8eafcb6457540c940df90d57348645e6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

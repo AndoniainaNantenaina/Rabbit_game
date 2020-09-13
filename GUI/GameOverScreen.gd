@@ -3,6 +3,7 @@ extends Control
 
 func _ready():
 	$AnimationPlayer.play("default")
+#	$ScoreText.text = str(player.score)
 
 
 func _on_ReplayButton_pressed():
