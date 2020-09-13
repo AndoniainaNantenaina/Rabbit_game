@@ -23,10 +23,10 @@ __meta__ = {
 }
 
 [node name="Loose_text" parent="." instance=ExtResource( 3 )]
-margin_left = 298.264
-margin_top = 194.438
-margin_right = 608.264
-margin_bottom = 228.438
+margin_left = 355.0
+margin_top = 194.0
+margin_right = 627.0
+margin_bottom = 228.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_left = 0.5

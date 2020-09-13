@@ -11,7 +11,7 @@ margin_right = 310.0
 margin_bottom = 34.0
 rect_scale = Vector2( 1.5, 1.4 )
 custom_fonts/font = SubResource( 1 )
-text = "Oups..! Vous avez perdu"
+text = "Oups..! You LOST"
 __meta__ = {
 "_edit_use_anchors_": false
 }
