@@ -6,7 +6,6 @@ enum  {
 }
 
 var health = 3
-
 var velocity = Vector2.ZERO
 
 export var WALK_SPEED = 120 * 1.5
@@ -88,7 +87,7 @@ func death_state(delta):
 	
 	
 func _on_HurtBox_area_entered(area):
-	hitbox.score = hitbox.score - 1
+#	hitbox.score = hitbox.score - 1
 	if self.health == 3:
 		self.heartThree.value = 0
 		self.health -= 1
@@ -99,5 +98,6 @@ func _on_HurtBox_area_entered(area):
 		self.heartOne.value = 0
 		self.health -= 1
 		get_tree().change_scene("res://GUI/GameOverScreen.tscn")
+
 	state = DEATH
 	

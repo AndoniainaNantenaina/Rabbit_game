@@ -52,9 +52,6 @@ position = Vector2( 0, -72 )
 scale = Vector2( 1.024, 1 )
 texture = ExtResource( 1 )
 centered = false
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
