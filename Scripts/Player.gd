@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 enum  {
 	WALK,
+	DEATH
 }
 
 var health = 3
@@ -33,6 +34,8 @@ func _physics_process(delta):
 	match state:
 		WALK :
 			walk_state(delta)
+		DEATH :
+			death_state(delta)
 		
 func walk_state(delta):
 	var input_vector = Vector2.ZERO
@@ -43,6 +46,7 @@ func walk_state(delta):
 		anim_tree.set("parameters/Walk/blend_position", input_vector.x)
 		anim_tree.set("parameters/Run/blend_position", input_vector.x)
 		anim_tree.set("parameters/Jump/blend_position", input_vector.x)
+		anim_tree.set("parameters/Death/blend_position", input_vector.x)
 			
 		if Input.is_action_pressed("run") :
 			velocity = velocity.move_toward(input_vector * RUN_SPEED, ACCELERATION * delta)
@@ -75,7 +79,14 @@ func move():
 func jump_finished():
 	state = WALK
 
+func _death_animation_finished():
+	state = WALK
+	position = Vector2(100, 512)
 
+func death_state(delta):
+	anim_state.travel("Death")
+	
+	
 func _on_HurtBox_area_entered(area):
 	hitbox.score = hitbox.score - 1
 	if self.health == 3:
@@ -88,5 +99,5 @@ func _on_HurtBox_area_entered(area):
 		self.heartOne.value = 0
 		self.health -= 1
 		get_tree().change_scene("res://GUI/GameOverScreen.tscn")
-
-	position = Vector2(100, 500)
+	state = DEATH
+	
