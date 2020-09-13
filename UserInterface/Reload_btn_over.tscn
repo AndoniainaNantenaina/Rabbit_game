@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UserInterface/Reload_btn_over.gd" type="Script" id=1]
+
+[node name="Reload_btn_over" type="Button"]
+margin_right = 110.0
+margin_bottom = 40.0
+text = "RECOMMENCER"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="." to="." method="_on_Reload_btn_over_pressed"]

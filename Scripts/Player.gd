@@ -87,6 +87,6 @@ func _on_HurtBox_area_entered(area):
 	elif self.health == 1:
 		self.heartOne.value = 0
 		self.health -= 1
-		#	==================== Game Over ==================
+		get_tree().change_scene("res://GUI/GameOverScreen.tscn")
 
 	position = Vector2(100, 500)
