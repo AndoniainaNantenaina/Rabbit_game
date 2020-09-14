@@ -7,7 +7,7 @@ extends Area2D
 
 onready var score = 0 setget score_change
 onready var scoreLabel = get_tree().current_scene.get_node("HUD/Score")
-#onready var scoreLabel = get_parent().get_node("HUD/Score")
+onready var hud = get_tree().current_scene.get_node("HUD")
 
 func score_change(value):
 	score = value
@@ -27,3 +27,5 @@ func _on_Hitbox_area_entered(area):
 	score += 1
 	scoreLabel.text = str(score)
 	GlobalScore.score = score
+	
+	hud.time_left += 2

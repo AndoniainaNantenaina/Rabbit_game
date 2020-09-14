@@ -28,11 +28,11 @@ func _on_TimerObjectToShow_timeout():
 	elif self.nbr_object_falling < 15:
 		timer_object_to_show.wait_time = 2
 	elif self.nbr_object_falling < 20:
-		timer_object_to_show.wait_time = 1.5
+		object_to_fall.speed += 100
 	elif self.nbr_object_falling < 25:
-		timer_object_to_show.wait_time = 1
+		object_to_fall.speed += 100
 	else:
-		timer_object_to_show.wait_time = 0.5
+		object_to_fall.speed += 100
 
 
 func _on_TimerDayAndNight_timeout():
