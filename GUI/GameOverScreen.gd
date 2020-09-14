@@ -7,7 +7,7 @@ func _ready():
 #	$ScoreText.text = str(player.score)
 
 func _process(delta):
-	scoretext.text = "You Score : " + str(GlobalScore.score)
+	scoretext.text = "Your Score : " + str(GlobalScore.score)
 
 func _on_ReplayButton_pressed():
 	get_tree().change_scene("res://Main.tscn")
