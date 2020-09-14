@@ -19,8 +19,13 @@ func _physics_process(delta):
 
 func create(position):
 	self.position = position
-	self.velocity = Vector2(0, speed)
+	self.velocity = Vector2(0, getSpeed())
 
+func getSpeed():
+	return self.speed
+	
+func setSpeed(speed):
+	self.speed = speed
 
 func _on_HurtBox_area_entered(area):
 	var hitEffect = HitEffect.instance()
