@@ -18,6 +18,7 @@ _global_script_class_icons={
 config/name="Wild Evasion"
 run/main_scene="res://GUI/MainScreen.tscn"
 boot_splash/image="res://Images/splash_screen.png"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon_wild_evasion.png"
 
 [autoload]
@@ -79,6 +80,7 @@ run={
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=0
 vram_compression/import_etc=true

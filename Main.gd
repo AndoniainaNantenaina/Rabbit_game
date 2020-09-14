@@ -30,8 +30,14 @@ func _on_TimerObjectToShow_timeout():
 	elif self.nbr_object_falling < 20:
 		object_to_fall.speed += 100
 	elif self.nbr_object_falling < 25:
+		timer_object_to_show.wait_time = 1.5
 		object_to_fall.speed += 100
-	else:
+	elif self.nbr_object_falling < 30:
+		object_to_fall.speed += 100
+	elif self.nbr_object_falling < 40:
+		object_to_fall.speed += 100
+	elif self.nbr_object_falling < 50:
+		timer_object_to_show.wait_time = 1
 		object_to_fall.speed += 100
 
 
