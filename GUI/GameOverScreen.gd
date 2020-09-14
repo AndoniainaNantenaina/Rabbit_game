@@ -10,6 +10,7 @@ func _process(delta):
 	scoretext.text = "Your Score : " + str(GlobalScore.score)
 
 func _on_ReplayButton_pressed():
+	GlobalScore.score = 0
 	get_tree().change_scene("res://Main.tscn")
 
 

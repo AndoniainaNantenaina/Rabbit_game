@@ -35,6 +35,7 @@ action = "ui_accept"
 visibility_mode = 1
 
 [node name="TouchScreenButtonSprint" type="TouchScreenButton" parent="."]
+visible = false
 position = Vector2( 1664, 1040 )
 normal = ExtResource( 5 )
 pressed = ExtResource( 6 )
