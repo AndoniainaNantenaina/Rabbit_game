@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Images/touchscreens/LeftArrow (1).png" type="Texture" id=1]
+[ext_resource path="res://Images/touchscreens/LeftArrow (2).png" type="Texture" id=2]
+[ext_resource path="res://Images/touchscreens/Up (2).png" type="Texture" id=3]
+[ext_resource path="res://Images/touchscreens/RightArrow (2).png" type="Texture" id=4]
+[ext_resource path="res://Images/touchscreens/Play (3).png" type="Texture" id=5]
+[ext_resource path="res://Images/touchscreens/Play (2).png" type="Texture" id=6]
+[ext_resource path="res://Images/touchscreens/Up (3).png" type="Texture" id=7]
+[ext_resource path="res://Images/touchscreens/RightArrow (1).png" type="Texture" id=8]
+
+[node name="TouchScreen" type="CanvasLayer"]
+scale = Vector2( 0.5, 0.5 )
+transform = Transform2D( 0.5, 0, 0, 0.5, 0, 0 )
+
+[node name="TouchScreenButtonLeft" type="TouchScreenButton" parent="."]
+position = Vector2( 48, 1040 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 2 )
+action = "ui_left"
+visibility_mode = 1
+
+[node name="TouchScreenButtonRight" type="TouchScreenButton" parent="."]
+position = Vector2( 256, 1040 )
+normal = ExtResource( 8 )
+pressed = ExtResource( 4 )
+action = "ui_right"
+visibility_mode = 1
+
+[node name="TouchScreenButtonJump" type="TouchScreenButton" parent="."]
+position = Vector2( 1856, 1040 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 3 )
+action = "ui_accept"
+visibility_mode = 1
+
+[node name="TouchScreenButtonSprint" type="TouchScreenButton" parent="."]
+position = Vector2( 1664, 1040 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 6 )
+action = "run"
+visibility_mode = 1
