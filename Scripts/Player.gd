@@ -15,7 +15,7 @@ export var ACCELERATION = 500
 export var GRAVITY = 25
 export var JUMP_HIGH = 500
 
-
+onready var anim_player = $AnimationPlayer
 onready var anim_tree = $AnimationTree
 onready var hitbox = $Hitbox
 onready var anim_state = anim_tree.get("parameters/playback")
@@ -79,8 +79,17 @@ func jump_finished():
 	state = WALK
 
 func _death_animation_finished():
-	state = WALK
 	position = Vector2(100, 512)
+	anim_player.play("RespawnRight")
+
+func respawn_anim_finished():
+	anim_tree.set("parameters/Idle/blend_position", 1)
+	anim_tree.set("parameters/Walk/blend_position", 1)
+	anim_tree.set("parameters/Run/blend_position", 1)
+	anim_tree.set("parameters/Jump/blend_position", 1)
+	anim_tree.set("parameters/Death/blend_position", 1)
+	state = WALK
+
 
 func death_state(delta):
 	anim_state.travel("Death")
@@ -98,6 +107,5 @@ func _on_HurtBox_area_entered(area):
 		self.heartOne.value = 0
 		self.health -= 1
 		get_tree().change_scene("res://GUI/GameOverScreen.tscn")
-
 	state = DEATH
 	
