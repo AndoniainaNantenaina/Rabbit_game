@@ -38,9 +38,11 @@ func _on_TimerObjectToShow_timeout():
 		self.speed = 350
 	elif self.nbr_object_falling < 40:
 		timer_object_to_show.wait_time = 1
-		self.speed += 400
+		self.speed = 400
 	elif self.nbr_object_falling < 50:
-		self.speed += 500
+		self.speed = 500
+	else:
+		self.speed = 700
 
 
 func _on_TimerDayAndNight_timeout():
